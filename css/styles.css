@@ -254,8 +254,8 @@ body {
 
 .nav-list-item-link {
     /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    color: var(--color-navy-blue);
     font-weight: 500;
-    color: var(--color-ocean);
     line-height: 1.5;
     letter-spacing: 0.02em;
     /* Модуль №3 - Блокова бодель. Flexbox */
@@ -293,7 +293,6 @@ body {
 
 .nav-list-item-link::after {
     /* Модуль №2 - Селектори та колір. Текст та шрифти */
-    background-color: var(--color-ocean);
     /* Модуль №3 - Блокова бодель. Flexbox */
     display: block;
     /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
@@ -311,7 +310,7 @@ body {
 
 .nav-list-item-link.active::after {
     /* Модуль №2 - Селектори та колір. Текст та шрифти */
-
+    background-color: var(--color-ocean);
     /* Модуль №3 - Блокова бодель. Flexbox */
     /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
     /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
