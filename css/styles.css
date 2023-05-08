@@ -302,7 +302,7 @@ body {
     border-radius: 2px;
     /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     /* Модуль №6 - Елементи та валідація форм */
     /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
@@ -862,9 +862,10 @@ body {
     align-items: center;
     /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
     border: 1px solid var(--color-light-slate);
+    border-color: var(--color-light-slate);
     border-radius: 4px;
     /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
-    transition: color var(--anim-medium), border var(--anim-medium), border-radius var(--anim-medium);
+    transition: color var(--anim-medium), border var(--anim-medium), border-color var(--anim-medium);
     /* Модуль №6 - Елементи та валідація форм */
     /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
 }
@@ -876,6 +877,7 @@ body {
     /* Модуль №3 - Блокова бодель. Flexbox */
     /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
     border: 1px solid var(--color-ocean);
+    border-color: var(--color-ocean);
     border-radius: 4px;
     /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
     /* Модуль №6 - Елементи та валідація форм */
@@ -1128,9 +1130,8 @@ body {
     /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
     transition: color var(--anim-medium),
         background-color var(--anim-medium),
-        border var(--anim-medium),
-        box-shadow var(--anim-medium),
-        border-radius var(--anim-medium);
+        border-color var(--anim-medium),
+        box-shadow var(--anim-medium);
     /* Модуль №6 - Елементи та валідація форм */
     /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
 }
@@ -1143,6 +1144,7 @@ body {
     /* Модуль №3 - Блокова бодель. Flexbox */
     /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
     border: 1px solid transparent;
+    border-color: var(--color-ocean);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
         0px 2px 1px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -1215,43 +1217,32 @@ body {
     /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
 }
 
-.overlay {
-    /* Модуль №2 - Селектори та колір. Текст та шрифти */
-    background-color: var(--color-iris);
-    /* Модуль №3 - Блокова бодель. Flexbox */
-    padding-top: 40px;
-    padding-left: 32px;
-    padding-right: 32px;
-    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
-    width: 100%;
-    height: 100%;
-    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(100%);
-    transition: transform var(--anim-medium);
-    /* Модуль №6 - Елементи та валідація форм */
-    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
-}
-
-.card-list-item:hover .overlay {
-    transform: translateY(0);
-}
-
 .overlay-text {
     /* Модуль №2 - Селектори та колір. Текст та шрифти */
     color: var(--color-cloud);
+    background-color: var(--color-iris);
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     /* Модуль №3 - Блокова бодель. Flexbox */
+    padding: 40px 32px;
+    width: 100%;
+    height: 100%;
     /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
     /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    position: absolute;
+    top: 0;
+    transform: translateY(100%);
+    transition: transform var(--anim-medium);
     /* Модуль №6 - Елементи та валідація форм */
     /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.card-list-item-link:hover .overlay-text,
+.card-list-item-link:focus .overlay-text {
+    transform: translateY(0%);
 }
 
 .portfolio-card-content {
@@ -1325,7 +1316,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    transition: visibility var(--anim-medium), opacity var(--anim-medium), ;
+    transition: opacity var(--anim-medium), visibility var(--anim-medium);
     /* Модуль №6 - Елементи та валідація форм */
     /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
 }
@@ -1342,7 +1333,7 @@ body {
     background-color: var(--color-dairy);
     /* Модуль №3 - Блокова бодель. Flexbox */
     width: 408px;
-    height: 576px;
+    min-height: 576px;
     /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -1352,11 +1343,12 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    transition: opacity var(--anim-medium), transform var(--anim-medium);
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform var(--anim-medium);
     transition-delay: 400ms;
     /* Модуль №6 - Елементи та валідація форм */
     /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+    /* opacity var(--anim-medium), */
 }
 
 .backdrop.is-hidden .modal {
@@ -1383,9 +1375,11 @@ body {
     position: absolute;
     top: 24px;
     right: 24px;
-    transition: background-color var(--anim-medium), color var(--anim-medium);
+    transition: background-color var(--anim-medium), border var(--anim-medium);
     /* Модуль №6 - Елементи та валідація форм */
     /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+    /* color var(--anim-medium) */
+
 }
 
 .modal-close-btn:hover,
@@ -1394,6 +1388,7 @@ body {
     background-color: var(--color-ocean);
     color: var(--color-cornflower);
     /* Модуль №3 - Блокова бодель. Flexbox */
+    border: none;
     /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
     /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
     /* Модуль №6 - Елементи та валідація форм */
@@ -1403,6 +1398,18 @@ body {
 .modal-close-icon {
     /* Модуль №2 - Селектори та колір. Текст та шрифти */
     fill: currentColor;
+    /* Модуль №3 - Блокова бодель. Flexbox */
+    /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
+    /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
+    transition: fill var(--anim-medium);
+    /* Модуль №6 - Елементи та валідація форм */
+    /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
+}
+
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+    /* Модуль №2 - Селектори та колір. Текст та шрифти */
+    fill: #FFFFFF;
     /* Модуль №3 - Блокова бодель. Flexbox */
     /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
     /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
