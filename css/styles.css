@@ -865,7 +865,8 @@ body {
     border-color: var(--color-light-slate);
     border-radius: 4px;
     /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
-    transition: color var(--anim-medium), border-color var(--anim-medium);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     /* Модуль №6 - Елементи та валідація форм */
     /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
 }
@@ -1314,7 +1315,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    transition: opacity var(--anim-medium), visibility var(--anim-medium);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     /* Модуль №6 - Елементи та валідація форм */
     /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
 }
@@ -1342,7 +1344,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    transition: transform var(--anim-medium);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition-delay: 400ms;
     /* Модуль №6 - Елементи та валідація форм */
     /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
