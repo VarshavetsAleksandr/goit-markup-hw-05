@@ -1370,7 +1370,7 @@ body {
     position: absolute;
     top: 24px;
     right: 24px;
-    transition: background-color var(--anim-medium), border var(--anim-medium);
+    transition: background-color var(--anim-medium), color var(--anim-medium), border-color var(--anim-medium);
     /* Модуль №6 - Елементи та валідація форм */
     /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
     /* color var(--anim-medium) */
@@ -1383,7 +1383,7 @@ body {
     background-color: var(--color-ocean);
     color: var(--color-cornflower);
     /* Модуль №3 - Блокова бодель. Flexbox */
-    border: none;
+    border-color: transparent;
     /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
     /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
     /* Модуль №6 - Елементи та валідація форм */
@@ -1396,7 +1396,6 @@ body {
     /* Модуль №3 - Блокова бодель. Flexbox */
     /* Модуль №4 - Декоративні ефекти та елементи. Векторна графіка */
     /* Модуль №5 - Позиціоновані елементи. Переходи та анімація */
-    transition: fill var(--anim-medium);
     /* Модуль №6 - Елементи та валідація форм */
     /* Модуль №7 - Адаптивна верстка. Адаптивна графіка */
 }
